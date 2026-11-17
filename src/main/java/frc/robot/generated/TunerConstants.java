@@ -277,18 +277,18 @@ public class TunerConstants {
          *                                  and radians
          * @param modules                   Constants for each specific module
          */
-        //  public TunerSwerveDrivetrain(
-        //     SwerveDrivetrainConstants drivetrainConstants,
-        //     double odometryUpdateFrequency,
-        //     Matrix<N3, N1> odometryStandardDeviation,
-        //     Matrix<N3, N1> visionStandardDeviation,
-        //     SwerveModuleConstants<?, ?, ?>... modules
-        // ) {
-        //     super(
-        //         TalonFX::new, TalonFX::new, CANcoder::new,
-        //         drivetrainConstants, odometryUpdateFrequency,
-        //         odometryStandardDeviation, visionStandardDeviation, modules
-        //     );
-        // }
+        public TunerSwerveDrivetrain(
+            SwerveDrivetrainConstants drivetrainConstants,
+            double odometryUpdateFrequency,
+            Matrix<N3, N1> odometryStandardDeviation,
+            Matrix<N3, N1> visionStandardDeviation,
+            SwerveModuleConstants<?, ?, ?>... modules
+        ) {
+            super(
+                TalonFX::new, TalonFX::new, CANcoder::new,
+                drivetrainConstants, odometryUpdateFrequency,
+                odometryStandardDeviation, visionStandardDeviation, modules
+            );
+        }
     }
 }
